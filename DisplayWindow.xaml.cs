@@ -22,6 +22,8 @@ namespace Practice_Test_Prog122_Week10_L14
         public DisplayWindow()
         {
             InitializeComponent();
+
+            lvDisplayMovies.ItemsSource = Data.Movies;
         }
     }
 }

@@ -19,13 +19,23 @@ namespace Practice_Test_Prog122_Week10_L14
         public MainWindow()
         {
             InitializeComponent();//<--don't delete this
-            
+            lbDisplayMovie.ItemsSource = Data.Movies;
 
         }
 
         private void btnAddMovie_Click(object sender, RoutedEventArgs e)
         {
+            string title = txtTitle.Text;
+            string director = txtDirector.Text;
+            string rating = txtRating.Text;
+            Data.AddMovie(title, director, rating);
+            
+        }
 
+        private void btnOpenDisplayWindow_Click(object sender, RoutedEventArgs e)
+        {
+             DisplayWindow displaywindow = new DisplayWindow();
+             displaywindow.Show();
         }
     }
 }
